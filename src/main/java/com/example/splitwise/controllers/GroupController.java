@@ -5,8 +5,9 @@ import com.example.splitwise.dtos.CreateGroupResponseDto;
 import com.example.splitwise.dtos.DeleteGroupRequestDto;
 import com.example.splitwise.dtos.DeleteGroupResponseDto;
 import com.example.splitwise.dtos.ResponseStatus;
-import com.example.splitwise.exceptions.
+import com.example.splitwise.exceptions.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Controller
 public class GroupController {
