@@ -17,7 +17,7 @@ public class GroupController {
     public CreateGroupResponseDto createGroup(CreateGroupRequestDto requestDto){
         CreateGroupResponseDto responseDto = new CreateGroupResponseDto();
         try{
-            responseDto.setGroup(service.createGroup(requestDto.getGroupName(), requestDto.getDescription(), requestDto.getUserId()));
+            responseDto.setGroup(service.createGroup(requestDto.getName(), requestDto.getDescription(), requestDto.getCreatorUserId()));
             responseDto.setResponseStatus(ResponseStatus.SUCCESS);
         }catch(InvalidUserException e){
             responseDto.setResponseStatus(ResponseStatus.FAILURE);
