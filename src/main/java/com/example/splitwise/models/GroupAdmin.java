@@ -2,7 +2,9 @@ package com.example.splitwise.models;
 
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 public class GroupAdmin extends BaseModel{

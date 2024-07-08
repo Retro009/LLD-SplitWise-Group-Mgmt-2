@@ -4,7 +4,9 @@ package com.example.splitwise.models;
 import java.util.Date;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 public class GroupMember extends BaseModel{
