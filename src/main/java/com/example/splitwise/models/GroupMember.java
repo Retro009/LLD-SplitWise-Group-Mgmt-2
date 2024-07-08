@@ -2,7 +2,8 @@ package com.example.splitwise.models;
 
 
 import java.util.Date;
-import jakarta.persistence;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
