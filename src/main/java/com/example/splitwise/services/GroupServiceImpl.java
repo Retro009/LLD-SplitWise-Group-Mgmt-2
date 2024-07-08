@@ -31,7 +31,7 @@ public class GroupServiceImpl implements GroupService{
         group.setName(groupName);
         group.setDescription(description);
         group.setCreatedAt(new Date());
-        userRepository.save(group);
+        groupRepository.save(group);
 
         GroupAdmin  groupAdmin = new GroupAdmin();
         groupAdmin.setGroup(group);
