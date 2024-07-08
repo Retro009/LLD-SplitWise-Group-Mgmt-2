@@ -1,5 +1,5 @@
 package com.example.splitwise.models;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

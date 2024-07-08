@@ -6,9 +6,10 @@ import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
-@Entity
+
 @Data
-@Table(name="/'Group/")
+@Table(name="/'Group/'")
+@Entity
 public class Group extends BaseModel{
     private String name;
     private String description;
