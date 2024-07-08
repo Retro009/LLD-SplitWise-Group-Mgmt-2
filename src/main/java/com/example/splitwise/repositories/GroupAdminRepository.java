@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface GroupAdminRepository extends JpaRepository<GroupAdmin, Long> {
     List<GroupAdmin> findAllByGroupId(Long groupId);
-    Optional<GroupAdmin> findByGroupIdAndAdminId(Long groupId, Long admin);
-
+    Optional<GroupAdmin> findByGroupIdAndAdminId(Long groupId, Long adminId);
+    
 }

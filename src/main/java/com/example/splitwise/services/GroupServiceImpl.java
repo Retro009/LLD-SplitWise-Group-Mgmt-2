@@ -36,7 +36,7 @@ public class GroupServiceImpl implements GroupService{
         GroupAdmin  groupAdmin = new GroupAdmin();
         groupAdmin.setGroup(group);
         groupAdmin.setAdmin(user);
-        group.setAddedBy(user);
+        groupAdmin.setAddedBy(user);
         groupAdminRepository.save(groupAdmin);
         
         return group;
@@ -48,11 +48,11 @@ public class GroupServiceImpl implements GroupService{
 
         GroupAdmin groupAdmin = groupAdminRepository.findByGroupIdAndAdminId(group.getId(), user.getId()).orElseThrow(()-> new UnAuthorizedAccessException("Access Denied"));
 
-        List<GroupAdmin> groupAdmins = groupAdminRepository.findByGroupId(groupId);
+        List<GroupAdmin> groupAdmins = groupAdminRepository.findAllByGroupId(groupId);
         for(GroupAdmin ga:groupAdmins){
             groupAdminRepository.delete(ga);
         }
-        List<GroupMember> groupMembers = groupMemberRepository.findByGroupId(groupId);
+        List<GroupMember> groupMembers = groupMemberRepository.findAllByGroupId(groupId);
         for(GroupMember gm:groupMembers){
             groupMemberRepository.delete(gm);
         }
